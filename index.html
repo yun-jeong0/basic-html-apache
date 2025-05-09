@@ -1,318 +1,421 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>데모 웹사이트</title>
-    <script src='https://cdn.tailwindcss.com'></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @keyframes pulse {
-            0%, 100% { opacity: .5; }
-            50% { opacity: 1; }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.5;
         }
-        .animate-pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        50% {
+          opacity: 1;
         }
+      }
+      .animate-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
     </style>
-</head>
-<body class="bg-gray-50">
+  </head>
+  <body class="bg-gray-50">
     <!-- Header -->
     <header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-        <div class="container mx-auto px-4 py-3">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center">
-                    <img src="images/logo.png" alt="Logo" class="w-40">
-                    <div class="ml-4">
-                        <h1 class="text-xl font-bold">Demo website</h1>
-                        <p class="text-sm opacity-75">Exceeding Customer Expectations Since 1984</p>
-                    </div>
-                </div>
-                
-                <div class="hidden md:block text-right">
-                    <p class="text-sm">+44 (0)1777 712 400</p>
-                    <p class="text-xs opacity-75">Monday to Friday 9am to 5pm</p>
-                </div>
-                
-                <select class="bg-white/10 rounded px-4 py-2 text-sm">
-                    <option>Select Country</option>
-                    <option>United States</option>
-                    <option>United Kingdom</option>
-                    <option>Germany</option>
-                    <option>France</option>
-                    <option>Spain</option>
-                    <option>Italy</option>
-                    <option>Portugal</option>
-                    <option>Sweden</option>
-                </select>
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <img src="images/logo.png" alt="Logo" class="w-40" />
+            <div class="ml-4">
+              <h1 class="text-xl font-bold">Demo website</h1>
+              <p class="text-sm opacity-75">Exceeding Customer Expectations Since 1984</p>
             </div>
+          </div>
+
+          <div class="hidden md:block text-right">
+            <p class="text-sm">+44 (0)1777 712 400</p>
+            <p class="text-xs opacity-75">Monday to Friday 9am to 5pm</p>
+          </div>
+
+          <select class="bg-white/10 rounded px-4 py-2 text-sm">
+            <option>Select Country</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Germany</option>
+            <option>France</option>
+            <option>Spain</option>
+            <option>Italy</option>
+            <option>Portugal</option>
+            <option>Sweden</option>
+          </select>
         </div>
-    </header><!-- Navigation -->
+      </div>
+    </header>
+    <!-- Navigation -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4">
-            <div class="nav-container flex space-x-8 py-4">
-                <a href="index.html" class="hover:text-indigo-600 transition-colors">Home</a>
-                <a href="onecolumn.html" class="hover:text-indigo-600 transition-colors">Products</a>
-                <a href="twocolumn1.html" class="hover:text-indigo-600 transition-colors">Markets</a>
-                <a href="twocolumn2.html" class="hover:text-indigo-600 transition-colors">Resources</a>
-                <a href="threecolumn.html" class="hover:text-indigo-600 transition-colors">News & Events</a>
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="nav-container flex space-x-8 py-4">
+          <a href="index.html" class="hover:text-indigo-600 transition-colors">Home</a>
+          <a href="onecolumn.html" class="hover:text-indigo-600 transition-colors">Products</a>
+          <a href="twocolumn1.html" class="hover:text-indigo-600 transition-colors">Markets</a>
+          <a href="twocolumn2.html" class="hover:text-indigo-600 transition-colors">Resources</a>
+          <a href="threecolumn.html" class="hover:text-indigo-600 transition-colors">News & Events</a>
         </div>
+      </div>
     </nav>
 
     <main class="container mx-auto px-4 py-8">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <!-- Main Content -->
-            <div class="lg:col-span-2 space-y-8">
-                <!-- Products Showcase -->
-                <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="images/ad1.jpg" alt="silicone sheeting" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="font-semibold">silicone sheeting</h3>
-                            <p class="text-red-600 font-bold">7.99$</p>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="images/ad2.jpg" alt="Definitive Rubber" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="font-semibold">Definitive Rubber</h3>
-                            <p class="text-red-600 font-bold">10.99$</p>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="images/ad3.jpg" alt="Industrial Rubber" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="font-semibold">Industrial Rubber</h3>
-                            <p class="text-red-600 font-bold">4.99$</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Sale Banner -->
-                <h2 id="headline" class="text-2xl font-bold text-center py-4">★ Super sale 90% sale ★</h2>
-
-                <!-- FAQ Section -->
-                <section class="bg-white rounded-lg shadow-lg p-6">
-                    <h2 class="text-xl font-bold mb-4">FAQ</h2>
-                    <div class="space-y-4">
-                        <div class="grid grid-cols-5 gap-4 border-b pb-4">
-                            <div class="col-span-1 font-semibold">Question1</div>
-                            <div class="col-span-4">
-                                <a href="https://www.renesas.com/en/applications/automotive/vehicle-control/tire-pressure-monitoring-system?srsltid=AfmBOor29p4UNBJkInYtGQbBtZS7b-PCHNzgXGSZ5DlAfG3-H-P-6VJE" class="text-gray-600 hover:text-indigo-600">industry for over 30 years, we have plenty of</a>
-                            </div>
-                        </div><div class="grid grid-cols-5 gap-4 border-b pb-4">
-                            <div class="col-span-1 font-semibold">Question2</div>
-                            <div class="col-span-4">
-                                <a href="https://www.renesas.com/en/applications/automotive/vehicle-control" class="text-gray-600 hover:text-indigo-600">rubber mouldings, gaskets, extrusions</a>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-5 gap-4 border-b pb-4">
-                            <div class="col-span-1 font-semibold">Question3</div>
-                            <div class="col-span-4">
-                                <a href="https://www.renesas.com/en/applications/automotive/vehicle-control" class="text-gray-600 hover:text-indigo-600">dapibus sed mattis quis, rutrum accumsan sed</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="lg:col-span-2 space-y-8">
+          <!-- Products Showcase -->
+          <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="images/ad1.jpg" alt="silicone sheeting" class="w-full h-48 object-cover" />
+              <div class="p-4">
+                <h3 class="font-semibold">silicone sheeting</h3>
+                <p class="text-red-600 font-bold">7.99$</p>
+              </div>
             </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="images/ad2.jpg" alt="Definitive Rubber" class="w-full h-48 object-cover" />
+              <div class="p-4">
+                <h3 class="font-semibold">Definitive Rubber</h3>
+                <p class="text-red-600 font-bold">10.99$</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="images/ad3.jpg" alt="Industrial Rubber" class="w-full h-48 object-cover" />
+              <div class="p-4">
+                <h3 class="font-semibold">Industrial Rubber</h3>
+                <p class="text-red-600 font-bold">4.99$</p>
+              </div>
+            </div>
+          </section>
 
-            <!-- Sidebar -->
-            <aside class="space-y-6">
-                <!-- Login Section -->
-                <div class="bg-white rounded-lg shadow-lg p-6 login-container">
-                    <h2 class="text-xl font-bold mb-4">LOGIN</h2>
-                    <div class="space-y-4">
-                        <div>
-                            <label class="block text-sm mb-1">ID:</label>
-                            <input type="text" placeholder="ID" class="w-full border rounded px-3 py-2">
-                        </div>
-                        <div>
-                            <label class="block text-sm mb-1">Password:</label>
-                            <input type="password" placeholder="Password" class="w-full border rounded px-3 py-2">
-                        </div>
-                        <button id="loginButton" class="w-full bg-gray-600 text-white rounded py-2 hover:bg-gray-700 transition-colors">
-                            LOGIN
-                        </button>
-                    </div>
-                </div>
+          <!-- Sale Banner -->
+          <h2 id="headline" class="text-2xl font-bold text-center py-4">★ Super sale 90% sale ★</h2>
 
-                <!-- Newsletter -->
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h2 class="text-xl font-bold mb-4">newletter sub</h2>
-                    <div class="space-y-4">
-                        <div>
-                            <label class="block text-sm mb-1">name:</label>
-                            <input type="text" placeholder="Name" class="w-full border rounded px-3 py-2">
-                        </div>
-                        <div>
-                            <label class="block text-sm mb-1">email:</label>
-                            <input type="email" placeholder="Email" class="w-full border rounded px-3 py-2">
-                        </div>
-                        <button id="subscribeButton" class="w-full bg-gray-600 text-white rounded py-2 hover:bg-gray-700 transition-colors">
-                            subscribe
-                        </button>
-                    </div>
+          <!-- FAQ Section -->
+          <section class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-xl font-bold mb-4">FAQ</h2>
+            <div class="space-y-4">
+              <div class="grid grid-cols-5 gap-4 border-b pb-4">
+                <div class="col-span-1 font-semibold">Question1</div>
+                <div class="col-span-4">
+                  <a
+                    href="https://www.renesas.com/en/applications/automotive/vehicle-control/tire-pressure-monitoring-system?srsltid=AfmBOor29p4UNBJkInYtGQbBtZS7b-PCHNzgXGSZ5DlAfG3-H-P-6VJE"
+                    class="text-gray-600 hover:text-indigo-600"
+                    >industry for over 30 years, we have plenty of</a
+                  >
                 </div>
-
-                <!-- Pricing Plans -->
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h2 class="text-xl font-bold mb-4">Gopro</h2>
-                    <div class="space-y-4">
-                        <div class="bg-white rounded-lg shadow p-6">
-                            <h3 class="text-lg font-bold">Neon</h3>
-                            <p class="mt-4">1GB for just</p>
-                            <p class="text-2xl font-bold mt-2">$4.95/Month.</p>
-                        </div>
-                        <div class="bg-white rounded-lg shadow p-6">
-                            <h3 class="text-lg font-bold">Argon</h3>
-                            <p class="mt-4">10GB for just</p>
-                            <p class="text-2xl font-bold mt-2">$10.75/Month.</p>
-                        </div>
-                    </div>
+              </div>
+              <div class="grid grid-cols-5 gap-4 border-b pb-4">
+                <div class="col-span-1 font-semibold">Question2</div>
+                <div class="col-span-4">
+                  <a
+                    href="https://www.renesas.com/en/applications/automotive/vehicle-control"
+                    class="text-gray-600 hover:text-indigo-600"
+                    >rubber mouldings, gaskets, extrusions</a
+                  >
                 </div>
-            </aside>
+              </div>
+              <div class="grid grid-cols-5 gap-4 border-b pb-4">
+                <div class="col-span-1 font-semibold">Question3</div>
+                <div class="col-span-4">
+                  <a
+                    href="https://www.renesas.com/en/applications/automotive/vehicle-control"
+                    class="text-gray-600 hover:text-indigo-600"
+                    >dapibus sed mattis quis, rutrum accumsan sed</a
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
 
-        <!-- Banner Image -->
-        <div class="mt-8">
-            <img src="images/longad1.jpg" alt="Main Image" class="w-full h-auto max-h-[300px] object-cover">
-        </div>
+        <!-- Sidebar -->
+        <aside class="space-y-6">
+          <!-- Login Section -->
+          <div class="bg-white rounded-lg shadow-lg p-6 login-container">
+            <h2 class="text-xl font-bold mb-4">LOGIN</h2>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm mb-1">ID:</label>
+                <input type="text" placeholder="ID" class="w-full border rounded px-3 py-2" />
+              </div>
+              <div>
+                <label class="block text-sm mb-1">Password:</label>
+                <input type="password" placeholder="Password" class="w-full border rounded px-3 py-2" />
+              </div>
+              <button
+                id="loginButton"
+                class="w-full bg-gray-600 text-white rounded py-2 hover:bg-gray-700 transition-colors"
+              >
+                LOGIN
+              </button>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-xl font-bold mb-4">newletter sub</h2>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm mb-1">name:</label>
+                <input type="text" placeholder="Name" class="w-full border rounded px-3 py-2" />
+              </div>
+              <div>
+                <label class="block text-sm mb-1">email:</label>
+                <input type="email" placeholder="Email" class="w-full border rounded px-3 py-2" />
+              </div>
+              <button
+                id="subscribeButton"
+                class="w-full bg-gray-600 text-white rounded py-2 hover:bg-gray-700 transition-colors"
+              >
+                subscribe
+              </button>
+            </div>
+          </div>
+
+          <!-- Pricing Plans -->
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-xl font-bold mb-4">Gopro</h2>
+            <div class="space-y-4">
+              <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-bold">Neon</h3>
+                <p class="mt-4">1GB for just</p>
+                <p class="text-2xl font-bold mt-2">$4.95/Month.</p>
+              </div>
+              <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-bold">Argon</h3>
+                <p class="mt-4">10GB for just</p>
+                <p class="text-2xl font-bold mt-2">$10.75/Month.</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Banner Image -->
+      <div class="mt-8">
+        <img src="images/longad1.jpg" alt="Main Image" class="w-full h-auto max-h-[300px] object-cover" />
+      </div>
     </main>
 
     <!-- Footer -->
     <footer class="bg-gray-700 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p class="mb-2">Contact us | Find us | JFlex Rubber Products</p>
-            <p>Micrasil | Suba-Flex | Impacta-Flex | V-Sil | V-Silc</p>
-        </div>
+      <div class="container mx-auto px-4 text-center">
+        <p class="mb-2">Contact us | Find us | JFlex Rubber Products</p>
+        <p>Micrasil | Suba-Flex | Impacta-Flex | V-Sil | V-Silc</p>
+      </div>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const loginButton = document.querySelector('#loginButton');
-            const idInput = document.querySelector('input[placeholder="ID"]');
-            const pwInput = document.querySelector('input[placeholder="Password"]');
-            const loginContainer = document.querySelector('.login-container');
+      document.addEventListener("DOMContentLoaded", function () {
+        // 로그인 HTTP 요청
+        const loginButton = document.querySelector("#loginButton");
+        const idInput = document.querySelector('input[placeholder="ID"]');
+        const pwInput = document.querySelector('input[placeholder="Password"]');
+        const loginContainer = document.querySelector(".login-container");
 
-            if (loginButton && idInput && pwInput && loginContainer) {
-                loginButton.addEventListener('click', function() {
-                    const id = idInput.value;
-                    const pw = pwInput.value;
-                    if (id === 'user' && pw === '1234') {
-                        alert('인증되셨습니다');
-                        loginContainer.innerHTML = `
+        if (loginButton && idInput && pwInput && loginContainer) {
+          loginButton.addEventListener("click", function () {
+            const id = idInput.value;
+            const pw = pwInput.value;
+
+            // 로그인 API 요청
+            fetch("https://api.example.com/login", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                username: id,
+                password: pw,
+              }),
+            })
+              .then((response) => {
+                if (!response.ok) {
+                  throw new Error("로그인 실패");
+                }
+                return response.json();
+              })
+              .then((data) => {
+                alert("인증되셨습니다");
+                loginContainer.innerHTML = `
                             <div class="p-6">
-                                <p class="text-lg mb-4">반갑습니다 ${id}님</p>
+                                <p class="text-lg mb-4">반갑습니다 ${data.username}님</p>
                                 <div class="bg-gray-100 p-4 rounded">
-                                    <p class="text-sm">상담건수: 5 | 예약건수: 3</p>
+                                    <p class="text-sm">상담건수: ${data.consultCount} | 예약건수: ${data.reservationCount}</p>
                                 </div>
                             </div>`;
-                    } else {
-                        alert('아이디 또는 비밀번호가 틀렸습니다');
+              })
+              .catch((error) => {
+                alert("아이디 또는 비밀번호가 틀렸습니다");
+                console.error("로그인 오류:", error);
+              });
+          });
+        }
+
+        // 뉴스레터 구독 HTTP 요청
+        const subscribeButton = document.querySelector("#subscribeButton");
+        const nameInput = document.querySelector('input[placeholder="Name"]');
+        const emailInput = document.querySelector('input[placeholder="Email"]');
+
+        if (subscribeButton && nameInput && emailInput) {
+          subscribeButton.addEventListener("click", function () {
+            const name = nameInput.value;
+            const email = emailInput.value;
+
+            if (name && email) {
+              const confirmation = confirm(`${name}님 ${email}로 정보를 받으시겠습니까?`);
+              if (confirmation) {
+                // 뉴스레터 구독 API 요청
+                fetch("https://api.example.com/subscribe", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    name: name,
+                    email: email,
+                  }),
+                })
+                  .then((response) => {
+                    if (!response.ok) {
+                      throw new Error("구독 실패");
                     }
-                });
+                    return response.json();
+                  })
+                  .then((data) => {
+                    alert(`감사합니다! ${data.message}`);
+                    nameInput.value = "";
+                    emailInput.value = "";
+                  })
+                  .catch((error) => {
+                    alert("구독 처리 중 오류가 발생했습니다.");
+                    console.error("구독 오류:", error);
+                  });
+              }
+            } else {
+              alert("이름과 이메일을 입력해 주시겠습니까?");
             }
-        });
+          });
+        }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const subscribeButton = document.querySelector('#subscribeButton');
-            const nameInput = document.querySelector('input[placeholder="Name"]');
-            const emailInput = document.querySelector('input[placeholder="Email"]');
+        // 상품 정보 가져오기 HTTP 요청
+        function fetchProducts() {
+          fetch("https://api.example.com/products")
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("상품 정보를 가져오는데 실패했습니다");
+              }
+              return response.json();
+            })
+            .then((products) => {
+              const productsContainer = document.querySelector("section.grid.grid-cols-1.md\\:grid-cols-3");
+              if (productsContainer) {
+                productsContainer.innerHTML = "";
 
-            if (subscribeButton && nameInput && emailInput) {
-                subscribeButton.addEventListener('click', function() {
-                    const name = nameInput.value;
-                    const email = emailInput.value;
-                    if (name && email) {
-                        const confirmation = confirm(`${name}님 ${email}로 정보를 받으시겠습니까?`);
-                        if (confirmation) {
-                            alert('감사합니다');
-                        }
-                    } else {
-                        alert('이름과 이메일을 입력해 주시겠습니까?');
-                    }
+                products.forEach((product) => {
+                  const productElement = document.createElement("div");
+                  productElement.className = "bg-white rounded-lg shadow-lg overflow-hidden";
+                  productElement.innerHTML = `
+                                    <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover">
+                                    <div class="p-4">
+                                        <h3 class="font-semibold">${product.name}</h3>
+                                        <p class="text-red-600 font-bold">${product.price}$</p>
+                                    </div>
+                                `;
+                  productsContainer.appendChild(productElement);
                 });
-            }
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = [
-                'images/longad1.jpg',
-                'images/longad2.jpg',
-                'images/longad3.jpg'
-            ];
-            let currentIndex = 0;
-            const mainImage = document.querySelector('img[alt="Main Image"]');
-
-            setInterval(() => {
-                currentIndex = (currentIndex + 1) % images.length;
-                mainImage.src = images[currentIndex];
-            }, 3000);
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('img');
-            const modal = document.createElement('div');
-            const modalImg = document.createElement('img');
-            const closeBtn = document.createElement('span');
-
-            modal.style.display = 'none';
-            modal.style.position = 'fixed';
-            modal.style.zIndex = '1000';
-            modal.style.left = '0';
-            modal.style.top = '0';
-            modal.style.width = '100%';
-            modal.style.height = '100%';
-            modal.style.overflow = 'auto';
-            modal.style.backgroundColor = 'rgba(0,0,0,0.8)';
-            modal.style.justifyContent = 'center';
-            modal.style.alignItems = 'center';
-
-            modalImg.style.maxWidth = '100%';
-            modalImg.style.maxHeight = '100%';
-            modalImg.style.transform = 'scale(2)';
-
-            closeBtn.style.position = 'absolute';
-            closeBtn.style.top = '10px';
-            closeBtn.style.right = '25px';
-            closeBtn.style.color = '#fff';
-            closeBtn.style.fontSize = '35px';
-            closeBtn.style.fontWeight = 'bold';
-            closeBtn.style.cursor = 'pointer';
-            closeBtn.innerHTML = '&times;';
-
-            modal.appendChild(modalImg);
-            modal.appendChild(closeBtn);
-            document.body.appendChild(modal);
-
-            images.forEach(img => {
-                img.addEventListener('click', function() {
-                    modal.style.display = 'flex';
-                    modalImg.src = this.src;
-                });
+              }
+            })
+            .catch((error) => {
+              console.error("상품 정보 가져오기 오류:", error);
             });
+        }
 
-            closeBtn.addEventListener('click', function() {
-                modal.style.display = 'none';
-            });
+        // 페이지 로드 시 상품 정보 가져오기
+        fetchProducts();
+      });
 
-            modal.addEventListener('click', function(event) {
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = ["images/longad1.jpg", "images/longad2.jpg", "images/longad3.jpg"];
+        let currentIndex = 0;
+        const mainImage = document.querySelector('img[alt="Main Image"]');
+
+        setInterval(() => {
+          currentIndex = (currentIndex + 1) % images.length;
+          mainImage.src = images[currentIndex];
+        }, 3000);
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll("img");
+        const modal = document.createElement("div");
+        const modalImg = document.createElement("img");
+        const closeBtn = document.createElement("span");
+
+        modal.style.display = "none";
+        modal.style.position = "fixed";
+        modal.style.zIndex = "1000";
+        modal.style.left = "0";
+        modal.style.top = "0";
+        modal.style.width = "100%";
+        modal.style.height = "100%";
+        modal.style.overflow = "auto";
+        modal.style.backgroundColor = "rgba(0,0,0,0.8)";
+        modal.style.justifyContent = "center";
+        modal.style.alignItems = "center";
+
+        modalImg.style.maxWidth = "100%";
+        modalImg.style.maxHeight = "100%";
+        modalImg.style.transform = "scale(2)";
+
+        closeBtn.style.position = "absolute";
+        closeBtn.style.top = "10px";
+        closeBtn.style.right = "25px";
+        closeBtn.style.color = "#fff";
+        closeBtn.style.fontSize = "35px";
+        closeBtn.style.fontWeight = "bold";
+        closeBtn.style.cursor = "pointer";
+        closeBtn.innerHTML = "&times;";
+
+        modal.appendChild(modalImg);
+        modal.appendChild(closeBtn);
+        document.body.appendChild(modal);
+
+        images.forEach((img) => {
+          img.addEventListener("click", function () {
+            modal.style.display = "flex";
+            modalImg.src = this.src;
+          });
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const textElement = document.querySelector('#headline');
-            const colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF'];
-            let colorIndex = 0;
-
-            setInterval(() => {
-                textElement.style.color = colors[colorIndex];
-                colorIndex = (colorIndex + 1) % colors.length;
-            }, 500);
+        closeBtn.addEventListener("click", function () {
+          modal.style.display = "none";
         });
+
+        modal.addEventListener("click", function (event) {
+          if (event.target === modal) {
+            modal.style.display = "none";
+          }
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const textElement = document.querySelector("#headline");
+        const colors = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF"];
+        let colorIndex = 0;
+
+        setInterval(() => {
+          textElement.style.color = colors[colorIndex];
+          colorIndex = (colorIndex + 1) % colors.length;
+        }, 500);
+      });
     </script>
-</body>
+  </body>
 </html>
